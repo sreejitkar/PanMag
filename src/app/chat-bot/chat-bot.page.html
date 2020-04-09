@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div class="wrapper-header">
+        <div class="left-icon" (click)="menuOpen()">
+            <img src="../../assets/icon/icon_menu.png" alt="menu open" />
+        </div>
+        <p>Fake News Detector</p>
+    </div>
+    <div class="wrapper-body">
+        <div class="messages">
+            <div
+                [class]="message.left?'message-text left': 'message-text right'"
+                *ngFor="let message of history"
+            >
+                {{message.text}}
+            </div>
+        </div>
+        <div class="input">
+            <input
+                type="text" 
+                [(ngModel)]="textInput"
+                placeholder="Write or paste text here hello"
+            />
+            <button (click)="sendMessage(textInput)">
+                <img src="../../assets/icon/icon_send.png" alt="send" />
+            </button>
+        </div>
+    </div>
+</div>

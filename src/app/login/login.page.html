@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="wrapper-header">
+        <div class="left-icon" (click)="menuOpen()">
+            <img src="../../assets/icon/icon_menu.png" alt="menu open" />
+        </div>
+        <p>Login</p>
+    </div>
+<ion-content>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required [(ngModel)]="emailInput"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required [(ngModel)]="passwordInput"></ion-input>
+    </ion-item>
+
+          <span>{{errmess}}</span> 
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="loginauth(emailInput,passwordInput)">Log In</ion-button>
+      </ion-col>
+    </ion-row>
+</ion-content>
+</div>

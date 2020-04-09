@@ -1,0 +1,7 @@
+{
+  "name": "covid-response",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

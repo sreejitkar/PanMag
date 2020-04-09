@@ -1,0 +1,26 @@
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <div class="menu-wrapper">
+        <div class="header">
+            <img
+                (click)="menuToggle(0)"
+                src="../assets/icon/icon_close.png"
+                alt="close menu"
+            />
+        </div>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerMainMenu" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="menu-list">
+        <label>Hello {{fname}}!</label>
+            <p (click)="menuToggle(1)">Updates</p>
+            <p (click)="menuToggle(2)">Fake News Detector</p>
+            <p>Store Locator</p>
+            <p>Notifications</p>
+            <p>Settings</p>
+            <p>About</p>
+        </div>
+    </div>
+</ion-menu>
+<ion-app>
+    <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

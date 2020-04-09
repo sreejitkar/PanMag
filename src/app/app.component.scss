@@ -1,0 +1,33 @@
+ion-menu {
+    #shadow-root {
+        .menu-inner {
+            width: 80%;
+        }
+    }
+}
+.menu-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #fcfcfc;
+    .header {
+        img {
+            width: calc(1.5rem + 0.75vw);
+            height: calc(1.5rem + 0.75vw);
+            object-fit: contain;
+            margin: calc(1rem + 0.5vw);
+        }
+    }
+    .menu-list {
+        display: flex;
+        flex-flow: column;
+        margin: calc(3rem + 1.5vw) 0;
+        p {
+            padding: calc(1.5rem + 0.75vw);
+            font-size: calc(1.2rem + 0.6vw);
+            margin: 0;
+            &:hover {
+                background-color: #ffd04655;
+            }
+        }
+    }
+}

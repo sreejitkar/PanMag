@@ -1,0 +1,44 @@
+<div class="wrapper">
+
+    <div class="wrapper-header">
+        <div class="left-icon" (click)="menuOpen()">
+            <img src="../../assets/icon/icon_menu.png" alt="menu open" />
+        </div>
+        <p>REGISTER</p>
+    </div>
+
+    <div class="wrapper-body">
+      <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" required [(ngModel)]="emailInput"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input type="text" required [(ngModel)]="fnameInput"></ion-input>
+    </ion-item>
+  <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input type="text" required [(ngModel)]="lnameInput"></ion-input>
+    </ion-item>
+        <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="text" required [(ngModel)]="passInput"></ion-input>
+    </ion-item>
+        <ion-item>
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input type="text" required [(ngModel)]="phnoInput"></ion-input>
+    </ion-item>
+      <ion-item>
+      <ion-label position="floating">Sex</ion-label>
+      <ion-input type="text" required [(ngModel)]="sexInput"></ion-input>
+      </ion-item>
+          <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="registerAuth(emailInput,passInput,fnameInput,lnameInput,phnoInput,sexInput)">Register</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+          <span>{{errmess}}</span>
+    </div>
+</div>
