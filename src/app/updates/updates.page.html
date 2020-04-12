@@ -31,10 +31,7 @@
             In States
         </div>
         <div class="card-holder">
-            <div
-                *ngFor="let state of update?.state_wise_list"
-                class="card-secondry"
-            >
+            <div *ngFor="let state of update?.state_wise_list" class="card-secondry">
                 <p class="state-name">{{state.state_name}}</p>
                 <div class="details">
                     <div class="row">
@@ -49,10 +46,10 @@
                         <p class="key">Cured</p>
                         <p class="value">{{state.cured}}</p>
                     </div>
-                    <div class="row">
+                    <!--<div class="row">
                         <p class="key">Foreign</p>
                         <p class="value">{{state.foreign}}</p>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
