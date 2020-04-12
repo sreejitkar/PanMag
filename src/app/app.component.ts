@@ -33,14 +33,18 @@ export class AppComponent {
             this.menu.enable(true, 'custom');
         });
     }
-    public menuToggle(choice: 0 | 1 | 2 ) {
+    public menuToggle(choice: 0 | 1 | 2 | 3) {
         if (choice === 1) {
             this.router.navigate(['/updates']);
             this.menu.close('custom');
         } else if (choice === 2) {
             this.router.navigate(['/chat-bot']);
             this.menu.close('custom');
-        } else {
+        } else if (choice === 3) {
+            this.router.navigate(['/slotcheck']);
+            this.menu.close('custom');
+        }
+         else {
             this.menu.close('custom');
         }
     }

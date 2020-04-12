@@ -25,6 +25,14 @@ const routes: Routes = [
     path: 'starter',
     loadChildren: () => import('./starter/starter.module').then( m => m.StarterPageModule)
   },
+  {
+    path: 'slotcheck',
+    loadChildren: () => import('./slotcheck/slotcheck.module').then( m => m.SlotcheckPageModule)
+  },
+  {
+    path: 'slotbook',
+    loadChildren: () => import('./slotbook/slotbook.module').then( m => m.SlotbookPageModule)
+  },
 ];
 
 @NgModule({
