@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SlotbookPageRoutingModule } from './slotbook-routing.module';
+import { BookresultPageRoutingModule } from './bookresult-routing.module';
 
-import { SlotbookPage } from './slotbook.page';
+import { BookresultPage } from './bookresult.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SlotbookPageRoutingModule
+    BookresultPageRoutingModule
   ],
-  declarations: [SlotbookPage],
-  bootstrap:[SlotbookPage]
-
+  declarations: [BookresultPage]
 })
-export class SlotbookPageModule {}
+export class BookresultPageModule {}

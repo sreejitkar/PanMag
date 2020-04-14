@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
+import {DataserviceService} from './dataservice.service';
+
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { IonicStorageModule } from '@ionic/storage';
         StatusBar,
         SplashScreen,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        DataserviceService
     ],
     bootstrap: [AppComponent],
 })
