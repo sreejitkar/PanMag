@@ -1,7 +1,12 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+*{
+    overflow-y: auto;
+}
 .wrapper-body{
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
     align-content: center;
+    overflow-y: auto;
 }
 .list-group-item{
     justify-content: center;

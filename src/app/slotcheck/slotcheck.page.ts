@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { HttpHandlerService } from '../http-handler.service';
-
+import {DataserviceService} from '../dataservice.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,10 +13,15 @@ import { HttpHandlerService } from '../http-handler.service';
 export class SlotcheckPage implements OnInit {
   private responseHandler;
   shoplist: string[];
+  given_shop_id:number;
+  public data :Array<any>;
   constructor(
     private menu: MenuController,
     private httpHandler: HttpHandlerService,
-  ) { }
+    private router: Router,
+    public dataservice:DataserviceService
+  ) { 
+  }
 
   ngOnInit() {
     this.responseHandler=this.httpHandler
@@ -29,9 +35,12 @@ export class SlotcheckPage implements OnInit {
   public menuOpen() {
     this.menu.open('custom');
   }
-  public moveToBook(id:number)
-  {
-    this.httpHandler
-      .post({shopid:})
+
+  public moveToBook(id:number,name:string,address:string,category:string){
+    this.dataservice.setOption('passed_shopid',id);
+    this.dataservice.setOption('passed_shopname',name);
+    this.dataservice.setOption('passed_shopadd',address);
+    this.dataservice.setOption('passed_shopcat',category);
+    this.router.navigate(['/','slotbook']);
   }
 }

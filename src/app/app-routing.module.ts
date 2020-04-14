@@ -33,6 +33,10 @@ const routes: Routes = [
     path: 'slotbook',
     loadChildren: () => import('./slotbook/slotbook.module').then( m => m.SlotbookPageModule)
   },
+  {
+    path: 'bookresult',
+    loadChildren: () => import('./bookresult/bookresult.module').then( m => m.BookresultPageModule)
+  },
 ];
 
 @NgModule({

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { IonicStorageModule } from '@ionic/storage';
+import { DataserviceService } from './dataservice.service';  
 
 @Component({
     selector: 'app-root',

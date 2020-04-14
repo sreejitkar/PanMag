@@ -1,9 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>slotbook</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<div class="wrapper">
+    <div class="wrapper-header">
+        <div class="left-icon" (click)="menuOpen()">
+            <img src="../../assets/icon/icon_menu.png" alt="menu open" />
+        </div>
+        <p>Select Prefered Slot</p>
+    </div>
+    <div class="wrapper-body">
+      <h1>Shop Name : {{data.passed_shopname}}</h1><br>
+      <h3>Shop ID : {{data.passed_shopid}}</h3><br>
+      <h3>Shop Address : {{data.passed_shopadd}}</h3><br>
+  <select data-live-search="true" [(ngModel)]="selected_slot">
+    <option *ngFor="let slot of slot_list | keyvalue" [value]="slot.value">{{slot.value}}</option>
+  </select><br>
+  <ion-item lines="full">
+    <ion-label position="floating">Phone Number</ion-label>
+    <ion-input type="number" required [(ngModel)]="phno_input"></ion-input>
+  </ion-item>  <button type="button" class="btn btn-primary" (click)="confirmBook(selected_slot,phno_input)">Confirm Booking</button>       
+  </div>
+</div>

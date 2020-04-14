@@ -3,6 +3,8 @@ import { MenuController } from '@ionic/angular';
 import { HttpHandlerService } from '../http-handler.service';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
+import {DataserviceService} from '../dataservice.service';
+
 
 @Component({
   selector: 'app-login',
@@ -19,6 +21,7 @@ export class LoginPage implements OnInit {
     private menu: MenuController,
     private router: Router,
     private storage : Storage,
+    public dataservice:DataserviceService
   ) { }
 
     ngOnInit() {}
@@ -35,6 +38,7 @@ export class LoginPage implements OnInit {
         this.errmess=response.toString();
         if (this.errmess=="LOGIN SUCCESS")
         {
+          this.dataservice.setOption('logged_email_id',this.emailInput);
           this.router.navigate(['/','updates']);
         }
         }); 
